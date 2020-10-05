@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url(//db.onlinewebfonts.com/c/9475d6a0b79c164f9f605673714e75d9?family=Circular+Std+Medium);
 *,
 *::after,
 *::before {
@@ -11,8 +11,10 @@ html {
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Circular Std Medium", sans-serif;
   margin: 0;
+  background-color: #383b49;
+  color: #ffffff;
 }
 
 input,
