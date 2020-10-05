@@ -1,8 +1,33 @@
 .btn {
-  border-radius: 20px;
-  font-size: 1.2rem;
+  background: transparent
+    linear-gradient(
+      180deg,
+      var(--unnamed-color-ed8770) 0%,
+      var(--unnamed-color-d9519d) 100%
+    )
+    0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #ed8770 0%, #d9519d 100%) 0%
+    0% no-repeat padding-box;
+  opacity: 1;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
   color: white;
-  background: #016b6b;
+  border-radius: 20px;
   border: none;
-  padding: 10px 20px;
+
+  min-width: 100px;
+  padding: 0.5rem;
+}
+
+.btn-img {
+  background: transparent url("//src/assets/play.svg") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+}
+
+span {
+  font-size: 8px;
 }
