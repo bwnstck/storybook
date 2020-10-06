@@ -27,7 +27,7 @@
 
 /* !Player Menu */
 .player-menu > * {
-  margin-right: 2.1rem;
+  margin-right: 2.5rem;
 }
 .player-menu {
   display: flex;
@@ -58,10 +58,14 @@ img.repeat {
   height: 0.8rem;
 }
 
+img.favorites {
+  display: 0.8;
+}
+
 .menu-text {
   height: 2rem;
   display: block;
-  margin-top: 0.7rem;
+  margin-top: 0.6rem;
 }
 
 /* !Single Buttons */
