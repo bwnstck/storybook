@@ -1,0 +1,44 @@
+.btn {
+  opacity: 1;
+
+  display: flex;
+  align-items: center;
+
+  color: white;
+  border-radius: 20px;
+  border: none;
+
+  min-width: 80px;
+  padding: 0.7rem 1.3rem;
+  margin: 1em 0;
+
+  background: none;
+  border: 1px solid white;
+}
+
+.btn :first-child {
+  margin-right: 0.7rem;
+}
+
+.goTo {
+  background: transparent
+    linear-gradient(
+      180deg,
+      var(--unnamed-color-ed8770) 0%,
+      var(--unnamed-color-d9519d) 100%
+    )
+    0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #ed8770 0%, #d9519d 100%) 0%
+    0% no-repeat padding-box;
+  border: none;
+}
+
+.btn-img {
+  background: transparent url("//src/assets/play.svg") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+}
+
+span {
+  font-size: 11px;
+}
