@@ -1,0 +1,75 @@
+/* !Player  General*/
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 1rem;
+}
+.player > :first-child {
+  margin-bottom: 2rem;
+}
+
+/* !Player Nav  */
+.player-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #e2e2e2;
+}
+
+.player-nav > * {
+  margin-right: 4rem;
+}
+.player-nav > :last-child {
+  margin-right: 0;
+}
+
+/* !Player Menu */
+.player-menu > * {
+  margin-right: 2.5rem;
+}
+.player-menu {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 0;
+  color: #c1c0c0;
+}
+/* .player-menu > * {
+  height: 1rem;
+} */
+
+/* Menu Items */
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Menu Icons */
+.menu-img {
+  height: 1.2rem;
+}
+.menu-img img {
+  height: 1rem;
+}
+
+img.repeat {
+  height: 0.8rem;
+}
+
+img.favorites {
+  display: 0.8;
+}
+
+.menu-text {
+  height: 2rem;
+  display: block;
+  margin-top: 0.6rem;
+}
+
+/* !Single Buttons */
+/* Play */
+.play {
+  width: 4rem;
+}
