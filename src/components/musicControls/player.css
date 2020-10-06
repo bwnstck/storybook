@@ -1,44 +1,55 @@
-.btn {
-  opacity: 1;
-
+/* Player  */
+.player {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 1rem;
+}
+.player > :first-child {
+  margin-bottom: 2rem;
+}
+
+/* Player  */
+.player-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.player-nav > * {
+  margin-right: 4rem;
+}
+.player-nav > :last-child {
+  margin-right: 0;
+}
+
+/* Player Menu */
+.player-menu > * {
+  margin-right: 2rem;
+}
+.player-menu {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 0;
+}
+
+.player-menu > * {
+  height: 1rem;
+}
+.menu-item {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-
-  color: white;
-  border-radius: 20px;
-  border: none;
-
-  min-width: 80px;
-  padding: 0.7rem 1.3rem;
-  margin: 1em 0;
-
-  background: none;
-  border: 1px solid white;
+  justify-content: center;
 }
 
-.btn :first-child {
-  margin-right: 0.7rem;
+.menu-text {
+  display: block;
+  margin-top: 1rem;
 }
 
-.goTo {
-  background: transparent
-    linear-gradient(
-      180deg,
-      var(--unnamed-color-ed8770) 0%,
-      var(--unnamed-color-d9519d) 100%
-    )
-    0% 0% no-repeat padding-box;
-  background: transparent linear-gradient(180deg, #ed8770 0%, #d9519d 100%) 0%
-    0% no-repeat padding-box;
-  border: none;
-}
-
-.btn-img {
-  background: transparent url("//src/assets/play.svg") 0% 0% no-repeat
-    padding-box;
-  opacity: 1;
-}
-
-span {
-  font-size: 11px;
+/* Play */
+.play {
+  width: 4rem;
 }
