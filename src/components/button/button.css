@@ -1,13 +1,4 @@
 .btn {
-  background: transparent
-    linear-gradient(
-      180deg,
-      var(--unnamed-color-ed8770) 0%,
-      var(--unnamed-color-d9519d) 100%
-    )
-    0% 0% no-repeat padding-box;
-  background: transparent linear-gradient(180deg, #ed8770 0%, #d9519d 100%) 0%
-    0% no-repeat padding-box;
   opacity: 1;
 
   display: flex;
@@ -19,10 +10,26 @@
 
   min-width: 80px;
   padding: 0.5rem;
+
+  background: none;
+  border: 1px solid white;
 }
 
 .btn > * {
   margin: 0 0.5rem;
+}
+
+.goTo {
+  background: transparent
+    linear-gradient(
+      180deg,
+      var(--unnamed-color-ed8770) 0%,
+      var(--unnamed-color-d9519d) 100%
+    )
+    0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #ed8770 0%, #d9519d 100%) 0%
+    0% no-repeat padding-box;
+  border: none;
 }
 
 .btn-img {
@@ -33,9 +40,4 @@
 
 span {
   font-size: 11px;
-}
-
-.btn-trans {
-  background: none;
-  border: 1px solid white;
 }
