@@ -1,4 +1,4 @@
-/* Player  */
+/* !Player  General*/
 .player {
   display: flex;
   flex-direction: column;
@@ -10,11 +10,12 @@
   margin-bottom: 2rem;
 }
 
-/* Player  */
+/* !Player Nav  */
 .player-nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  color: #e2e2e2;
 }
 
 .player-nav > * {
@@ -24,31 +25,46 @@
   margin-right: 0;
 }
 
-/* Player Menu */
+/* !Player Menu */
 .player-menu > * {
-  margin-right: 2rem;
+  margin-right: 2.1rem;
 }
 .player-menu {
   display: flex;
   justify-content: flex-start;
   padding: 1rem 0;
+  color: #c1c0c0;
 }
-
-.player-menu > * {
+/* .player-menu > * {
   height: 1rem;
-}
+} */
+
+/* Menu Items */
 .menu-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+
+/* Menu Icons */
+.menu-img {
+  height: 1.2rem;
+}
+.menu-img img {
+  height: 1rem;
+}
+
+img.repeat {
+  height: 0.8rem;
 }
 
 .menu-text {
+  height: 2rem;
   display: block;
-  margin-top: 1rem;
+  margin-top: 0.7rem;
 }
 
+/* !Single Buttons */
 /* Play */
 .play {
   width: 4rem;
