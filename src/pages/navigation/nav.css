@@ -21,7 +21,7 @@
 
 .playlist {
   display: flex;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   padding: 0;
   list-style: none;
