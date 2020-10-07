@@ -3,4 +3,4 @@ import welcome from "./welcome.html";
 
 export default { title: "Pages/Welcome" };
 
-export const basic = () => welcome;
+export const homescreen = () => welcome;

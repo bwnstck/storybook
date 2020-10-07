@@ -36,6 +36,12 @@
   padding: 1rem 0;
   color: #c1c0c0;
 }
+
+.menu-text {
+  height: 2rem;
+  display: block;
+  margin-top: 0.6rem;
+}
 /* .player-menu > * {
   height: 1rem;
 } */
@@ -61,12 +67,6 @@ img.repeat {
 
 img.favorites {
   display: 0.8;
-}
-
-.menu-text {
-  height: 2rem;
-  display: block;
-  margin-top: 0.6rem;
 }
 
 /* !Single Buttons */
