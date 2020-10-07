@@ -73,7 +73,7 @@ img.favorites {
 /* !Single Buttons */
 /* Play */
 .play {
-  width: 4rem;
+  width: 2.5rem;
   filter: hue-rotate(180);
 }
 

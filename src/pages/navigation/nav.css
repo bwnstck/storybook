@@ -37,7 +37,6 @@
   margin-bottom: 13.5px;
 }
 .song {
-  padding-left: 5px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -50,8 +49,12 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  flex-grow: 1;
 }
 
+.menu-info {
+  justify-content: center;
+}
 .song-title {
   margin: 0;
   color: #a3a4ab;
@@ -70,7 +73,20 @@
   margin: 10px;
 }
 
-.play {
+.play-pic {
   width: 22px;
   margin-right: 20px;
+}
+
+.player-controls {
+  width: 100vw;
+  position: fixed;
+  bottom: 67px;
+
+  padding-right: 50px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #0c1020;
 }
