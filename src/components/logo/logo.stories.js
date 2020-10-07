@@ -1,3 +1,5 @@
+import centered from "@storybook/addon-centered/html";
+
 import "./logo.css";
 import logoText from "./logo-text.html";
 import logo from "./logo.html";
