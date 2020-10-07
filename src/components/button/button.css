@@ -21,6 +21,7 @@
 }
 
 .goTo {
+  fill: red;
   background: transparent
     linear-gradient(
       180deg,
