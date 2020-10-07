@@ -32,5 +32,14 @@ a {
 
 a:hover {
   transform: scale(1.1);
+  background: -webkit-linear-gradient(#ed8770, #d9519d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transition: 0.3s ease-in-out;
+}
+
+.goTo-Text {
+  background: -webkit-linear-gradient(#ed8770, #d9519d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
