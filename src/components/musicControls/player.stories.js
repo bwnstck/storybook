@@ -1,3 +1,5 @@
+import centered from "@storybook/addon-centered/html";
+
 import "./player.css";
 
 import playerBack from "./back.html";
@@ -14,7 +16,7 @@ import playerControls from "./player-controls.html";
 import playerMenu from "./player-menu.html";
 import player from "./player.html";
 
-export default { title: "Components/PlayerControls" };
+export default { title: "Components/PlayerControls", decorators: [centered] };
 
 export const back = () => playerBack;
 export const play = () => playerPlay;
