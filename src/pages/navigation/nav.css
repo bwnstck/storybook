@@ -24,6 +24,8 @@
   height: 100%;
   flex-direction: column;
   padding: 0;
+  margin: 0;
+  margin-bottom: 133px;
   list-style: none;
 
   background-color: #191a2c;
