@@ -2,6 +2,8 @@
 
 :root {
   --background-color: #151827;
+  --text-font: "Circular Std", sans-serif;
+  --line-color: #242736;
 }
 
 *,
@@ -15,7 +17,7 @@ html {
 }
 
 body {
-  font-family: "Circular Std", sans-serif;
+  font-family: var(--text-font);
   font-weight: 400;
   font-size: 14px;
   margin: 0;

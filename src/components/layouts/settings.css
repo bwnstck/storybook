@@ -1,0 +1,54 @@
+.page__layout {
+  height: 100vh;
+  background-color: var(--background-color);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.page__header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+.page__headerimg {
+  margin: 0.5rem;
+}
+
+.page__headertext {
+  flex-grow: 1;
+}
+
+.page__main {
+  display: flex;
+  flex-direction: column;
+}
+.page__container {
+  border-bottom: 1px solid var(--line-color);
+  width: 100%;
+}
+.page__item {
+  display: flex;
+  align-items: center;
+}
+
+.page__img {
+  margin: 1rem;
+}
+
+.page__text {
+}
+
+.settings__icon {
+}
+
+.line {
+  margin: 6px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+.--long {
+  width: 26px;
+}
+.--short {
+  width: 16px;
+}
