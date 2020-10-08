@@ -26,12 +26,6 @@
   flex: 1;
   justify-content: center;
 }
-.page__headerHelper {
-  display: inline-flex;
-  flex: 1;
-  justify-content: center;
-  margin-left: auto;
-}
 
 .page__main {
   display: flex;
