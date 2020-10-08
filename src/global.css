@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-@import url(//db.onlinewebfonts.com/c/9475d6a0b79c164f9f605673714e75d9?family=Circular+Std+Medium);
+@import url("./assets/fonts/circular-std.css");
+
 *,
 *::after,
 *::before {
@@ -11,7 +11,8 @@ html {
 }
 
 body {
-  font-family: "Circular Std Medium", sans-serif;
+  font-family: "Circular Std", sans-serif;
+  font-weight: 700;
   margin: 0;
   background-color: #383b49;
   color: #ffffff;
@@ -32,5 +33,14 @@ a {
 
 a:hover {
   transform: scale(1.1);
+  background: -webkit-linear-gradient(#ed8770, #d9519d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transition: 0.3s ease-in-out;
+}
+
+.goTo-Text {
+  background: -webkit-linear-gradient(#ed8770, #d9519d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
