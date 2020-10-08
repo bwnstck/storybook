@@ -10,8 +10,8 @@
   margin-bottom: 2rem;
 }
 
-/* !Player Nav  */
-.player-nav {
+/* !Player Controls  */
+.player__playback-actions {
   min-width: 200px;
   display: flex;
   flex-direction: row;
@@ -20,18 +20,9 @@
   color: #e2e2e2;
 }
 
-/* .player-nav > * {
-  margin-right: 4rem;
-}
-.player-nav > :last-child {
-  margin-right: 0;
-} */
-
 /* !Player Menu */
-/* .player-menu > * {
-  margin-right: 2.5rem;
-} */
-.player-menu {
+
+.menu {
   min-width: 350px;
   display: flex;
   justify-content: space-between;
@@ -39,29 +30,26 @@
   color: #c1c0c0;
 }
 
-.menu-text {
+.menu--text {
   /* height: 2rem; */
   display: block;
   margin-top: 0.6rem;
   color: #c1c0c0;
 }
-/* .player-menu > * {
-  height: 1rem;
-} */
 
 /* Menu Items */
-.menu-item,
-.menu-item a {
+.menu__item,
+.menu__item a {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 /* Menu Icons */
-.menu-img {
+/* .menu--img {
   height: 1.2rem;
-}
-.menu-img img {
+} */
+.menu--img img {
   height: 1rem;
 }
 
@@ -75,15 +63,15 @@ img.favorites {
 
 /* !Single Buttons */
 /* Play */
-.play {
+.player__play {
   height: 2rem;
 }
 
-.back {
+.player__back {
   width: 20px;
 }
 
-.next {
+.player__next {
   width: 20px;
 }
 
@@ -107,4 +95,8 @@ img.favorites {
 
 .round {
   border-radius: 50%;
+}
+
+.myclass {
+  display: none;
 }
