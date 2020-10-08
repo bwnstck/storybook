@@ -10,12 +10,27 @@
   display: flex;
   align-items: center;
 }
+
+/* !Here */
 .page__headerimg {
-  margin: 0.5rem;
+  margin: 16px;
+  margin-right: auto;
+}
+
+.page__headerTxTBox {
+  text-align: center;
 }
 
 .page__headertext {
-  flex-grow: 1;
+  display: inline-flex;
+  flex: 1;
+  justify-content: center;
+}
+.page__headerHelper {
+  display: inline-flex;
+  flex: 1;
+  justify-content: center;
+  margin-left: auto;
 }
 
 .page__main {
@@ -38,11 +53,16 @@
 .page__text {
 }
 
+/* !Settings-Icon SelfMade */
+
 .settings__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .line {
-  margin: 6px;
+  margin: 3px 0;
   border: 1px solid #ffffff;
   border-radius: 10px;
 }
