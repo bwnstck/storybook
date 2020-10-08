@@ -8,6 +8,7 @@ import playerRepeat from "./repeat.html";
 import playerEq from "./eq.html";
 import playerShuffle from "./shuffle.html";
 import playerFav from "./favorites.html";
+import playerHome from "./home.html";
 
 import playerControls from "./player-controls.html";
 import playerMenu from "./player-menu.html";
@@ -24,6 +25,8 @@ export const repeat = () => playerRepeat;
 export const equalizer = () => playerEq;
 export const shuffle = () => playerShuffle;
 export const favorites = () => playerFav;
+
+export const home = () => playerHome;
 
 export const allControls = () => playerControls;
 export const menu = () => playerMenu;
