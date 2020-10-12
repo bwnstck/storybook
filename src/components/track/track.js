@@ -1,7 +1,7 @@
 import PlayButtonImg from "../../assets/play-active.svg";
 
 export function createTrackElement() {
-  // ADD HTML Elements
+  // !ADD HTML Elements
   const UL = document.createElement("ul");
   const listElement = document.createElement("li"); // div erstellen
   const trackImg = document.createElement("img");
@@ -11,7 +11,7 @@ export function createTrackElement() {
   const artist = document.createElement("span");
   const playButton = document.createElement("img");
 
-  //ADD Classes
+  // !ADD Classes
   UL.classList.add("playlist");
   trackImg.classList.add("song-pic");
   songBox.classList.add("song");
@@ -20,19 +20,21 @@ export function createTrackElement() {
   artist.classList.add("song-artist");
   playButton.classList.add("play-pic");
 
-  //ADD Sources
+  // !ADD Sources
   title.innerText = "Billy Jean";
   artist.innerText = "Michael Jackson";
   playButton.src = PlayButtonImg;
+  playButton.alt = "Play Button";
   trackImg.src = "https://source.unsplash.com/100x100/?artist,music";
+  trackImg.alt = "Album Cover";
 
-  //Link HTML Elements together
+  // !Link HTML Elements together
   UL.append(listElement);
   listElement.append(trackImg, songBox);
   songInfo.append(title, artist);
   songBox.append(songInfo, playButton);
 
-  // Returning Outer HTML Element
+  // !Returning Outer HTML Element
   return UL;
 
   /* <li>
