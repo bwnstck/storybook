@@ -3,7 +3,7 @@ import PlayButtonImg from "../../assets/play-active.svg";
 export function createTrackElement() {
   // !ADD HTML Elements
   const UL = document.createElement("ul");
-  const listElement = document.createElement("li"); // div erstellen
+  const listElement = document.createElement("li");
   const trackImg = document.createElement("img");
   const songBox = document.createElement("div");
   const songInfo = document.createElement("div");
@@ -37,7 +37,8 @@ export function createTrackElement() {
   // !Returning Outer HTML Element
   return UL;
 
-  /* <li>
+  /* //! HTML of Storybook/Pages/navigation/navSongs.html
+   <li>
   <img
     src="https://source.unsplash.com/100x100/?artist,music"
     alt=""
