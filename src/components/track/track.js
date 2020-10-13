@@ -1,6 +1,6 @@
 import PlayButtonImg from "../../assets/play-active.svg";
 
-export function createTrackElement() {
+export function createTrackElement(track) {
   // !ADD HTML Elements
   const UL = document.createElement("ul");
   const listElement = document.createElement("li");
@@ -20,9 +20,20 @@ export function createTrackElement() {
   artist.classList.add("song-artist");
   playButton.classList.add("play-pic");
 
+  // !ADD Song
+  const audioObj = new Audio(track.url);
+
+
+  // !ADD Eventlisteners
+
+  playButton.onclick = function (){
+    audioObj.play();
+    
+  }
+
   // !ADD Sources
-  title.innerText = "Billy Jean";
-  artist.innerText = "Michael Jackson";
+  title.innerText = track.title;
+  artist.innerText = track.artist;
   playButton.src = PlayButtonImg;
   playButton.alt = "Play Button";
   trackImg.src = "https://source.unsplash.com/100x100/?artist,music";
