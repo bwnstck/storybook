@@ -4,20 +4,47 @@ export default {
   title: "Components/JsElements",
 };
 
-const track = {
+const monsterTruck = {
   artist: "Monster Truck",
   title: "Greeting",
-  imgSrc: "monster-truck",
+  imgSrc: "monster, truck",
+  url: "http://soundbible.com/mp3/dixie-horn_daniel-simion.mp3",
+};
+const horribleWav = {
+  artist: "Santa Claus",
+  title: "Christmas Adventure",
+  imgSrc: "christmas",
+  url:
+    "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/TRG_Banks/TRG_Banks_Christmas_Album/TRG_Banks_-_08_-_A_Christmas_adventure_Part_1.mp3",
+};
+const horribleWav2 = {
+  artist: "Horn",
+  title: "Jingle",
+  imgSrc: "car",
   url: "http://soundbible.com/mp3/dixie-horn_daniel-simion.mp3",
 };
 
-export const horn = () => createTrackElement(track);
+const playlist = [monsterTruck, horribleWav, horribleWav2];
 
-export const christmas = () =>
-  createTrackElement({
-    artist: "Santa Claus",
-    title: "Christmas Adventure",
-    imgSrc: "christmas",
-    url:
-      "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/TRG_Banks/TRG_Banks_Christmas_Album/TRG_Banks_-_08_-_A_Christmas_adventure_Part_1.mp3",
+export const songs = () => {
+  const UL = document.createElement("ul");
+  UL.classList.add("playlist");
+
+  //   ! Map
+  playlist.map((track) => {
+    UL.append(createTrackElement(track));
   });
+
+  // ! For Of
+  //   for (let track of playlist) {
+  //     let song = createTrackElement(track);
+  //     UL.append(song);
+  //   }
+  // ! For-Loop
+  //   for (let i = 0; i < playlist.length; i++) {
+  //     let song = createTrackElement(playlist[i]);
+  //     UL.append(song);
+  //   }
+
+  return UL;
+};

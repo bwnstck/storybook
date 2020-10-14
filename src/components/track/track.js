@@ -1,9 +1,9 @@
 import PlayButtonImg from "../../assets/play-active.svg";
-import PauseButtonImg from "../../assets/pause-active.svg";
+
+import { showPauseButton, showPlayButton } from "../../assets/js/player";
 
 export function createTrackElement(track) {
   // !ADD HTML Elements
-  const UL = document.createElement("ul");
   const listElement = document.createElement("li");
   const trackImg = document.createElement("img");
   const songBox = document.createElement("div");
@@ -13,7 +13,6 @@ export function createTrackElement(track) {
   const playButton = document.createElement("img");
 
   // !ADD Classes
-  UL.classList.add("playlist");
   trackImg.classList.add("song-pic");
   songBox.classList.add("song");
   songInfo.classList.add("song-info");
@@ -30,8 +29,8 @@ export function createTrackElement(track) {
 
   playButton.onclick = () => {
     isPlaying
-      ? (audioObj.pause(), showPlayButton())
-      : (audioObj.play(), showPauseButton());
+      ? (audioObj.pause(), showPlayButton(playButton))
+      : (audioObj.play(), showPauseButton(playButton));
     switchIsPlaying();
   };
 
@@ -39,15 +38,6 @@ export function createTrackElement(track) {
 
   const switchIsPlaying = () => {
     isPlaying = !isPlaying;
-  };
-  const showPlayButton = () => {
-    playButton.src = PlayButtonImg;
-    playButton.alt = "Pause Button";
-  };
-
-  const showPauseButton = () => {
-    playButton.src = PauseButtonImg;
-    playButton.alt = "Play Button";
   };
 
   // !ADD Sources
@@ -59,13 +49,12 @@ export function createTrackElement(track) {
   trackImg.alt = `Album Cover ${track.artist}`;
 
   // !Link HTML Elements together
-  UL.append(listElement);
   listElement.append(trackImg, songBox);
   songInfo.append(title, artist);
   songBox.append(songInfo, playButton);
 
   // !Returning Outer HTML Element
-  return UL;
+  return listElement;
 
   /* //! HTML of Storybook/Pages/navigation/navSongs.html
    <li>
