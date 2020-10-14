@@ -1,4 +1,5 @@
 import PlayButtonImg from "../../assets/play-active.svg";
+import PauseButtonImg from "../../assets/pause-active.svg";
 
 export function createTrackElement(track) {
   // !ADD HTML Elements
@@ -23,20 +24,38 @@ export function createTrackElement(track) {
   // !ADD Song
   const audioObj = new Audio(track.url);
 
-
   // !ADD Eventlisteners
 
-  playButton.onclick = function (){
-    audioObj.play();
-    
-  }
+  let isPlaying = false;
+
+  playButton.onclick = () => {
+    isPlaying
+      ? (audioObj.pause(), showPlayButton())
+      : (audioObj.play(), showPauseButton());
+    switchIsPlaying();
+  };
+
+  // !Extracted Functions
+
+  const switchIsPlaying = () => {
+    isPlaying = !isPlaying;
+  };
+  const showPlayButton = () => {
+    playButton.src = PlayButtonImg;
+    playButton.alt = "Pause Button";
+  };
+
+  const showPauseButton = () => {
+    playButton.src = PauseButtonImg;
+    playButton.alt = "Play Button";
+  };
 
   // !ADD Sources
   title.innerText = track.title;
   artist.innerText = track.artist;
   playButton.src = PlayButtonImg;
   playButton.alt = "Play Button";
-  trackImg.src = track.imgSrc;
+  trackImg.src = `https://source.unsplash.com/100x100/?${track.imgSrc}`;
   trackImg.alt = `Album Cover ${track.artist}`;
 
   // !Link HTML Elements together
