@@ -36,8 +36,8 @@ export function createTrackElement(track) {
   artist.innerText = track.artist;
   playButton.src = PlayButtonImg;
   playButton.alt = "Play Button";
-  trackImg.src = "https://source.unsplash.com/100x100/?artist,music";
-  trackImg.alt = "Album Cover";
+  trackImg.src = track.imgSrc;
+  trackImg.alt = `Album Cover ${track.artist}`;
 
   // !Link HTML Elements together
   UL.append(listElement);
