@@ -2,8 +2,8 @@
 .player {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-
+  align-items: center;
+  width: 100vw;
   padding: 1rem;
 }
 .player > :first-child {
@@ -23,7 +23,7 @@
 /* !Player Menu */
 
 .menu {
-  min-width: 350px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 1rem 0;
