@@ -11,6 +11,27 @@ export const showPauseButton = (btn) => {
   btn.alt = "Play Button";
 };
 
-export const switchIsPlaying = () => {
-  isPlaying = !isPlaying;
+// !Menu
+
+export const chooseHome = () => {
+  console.log("Navigating to Home");
+};
+
+export const chooseSongs = () => {
+  console.log("Navigating to Songs");
+};
+
+export const chooseSettings = () => {
+  console.log("Navigating to Settings");
+};
+
+// !Playback
+export const playSong = () => {
+  console.log("Song Played");
+};
+export const nextSong = () => {
+  console.log("Next Song");
+};
+export const lastSong = () => {
+  console.log("REEEEEEEWIND");
 };

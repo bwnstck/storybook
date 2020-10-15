@@ -1,5 +1,6 @@
 import { createElement } from "../../utils/elements";
 import { songs } from "../track/track.stories";
+import * as playback from "../../assets/js/player";
 
 import backSvg from "../../assets/back.svg";
 import playSvg from "../../assets/play-transparent.png";
@@ -24,6 +25,7 @@ export const player = () => {
   });
   const menuItemSettingsAnchor = createElement("a", {
     children: [settingsIcon, settingsText],
+    onclick: playback.chooseSettings,
   });
   const menuItemSettings = createElement("div", {
     className: "menu__item",
@@ -40,6 +42,7 @@ export const player = () => {
   });
   const menuItemSongsAnchor = createElement("a", {
     children: [songsIcon, songsText],
+    onclick: playback.chooseSongs,
   });
   const menuItemSongs = createElement("div", {
     className: "menu__item",
@@ -72,6 +75,7 @@ export const player = () => {
 
   const menuItemHomeAnchor = createElement("a", {
     children: [HomeIcon, homeText],
+    onclick: playback.chooseHome,
   });
 
   const menuItemHome = createElement("div", {
@@ -101,9 +105,25 @@ export const player = () => {
     alt: "Back",
   });
 
+  const nextAnchor = createElement("a", {
+    className: "player__controls-anchor",
+    onclick: playback.nextSong,
+    children: [next],
+  });
+  const playAnchor = createElement("a", {
+    className: "player__controls-anchor",
+    onclick: playback.playSong,
+    children: [play],
+  });
+  const backAnchor = createElement("a", {
+    className: "player__controls-anchor",
+    onclick: playback.lastSong,
+    children: [back],
+  });
+
   const playbackActions = createElement("div", {
     className: "player__playback-actions",
-    children: [back, play, next],
+    children: [backAnchor, playAnchor, nextAnchor],
   });
 
   const songArtist = createElement("span", {

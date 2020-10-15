@@ -65,16 +65,19 @@ img.favorites {
 /* Play */
 .player__play {
   height: 2rem;
+  display: flex;
 }
 
-.player__back {
-  width: 20px;
-}
-
+.player__back,
 .player__next {
   width: 20px;
+  height: 100%;
 }
 
+.player__controls-anchor {
+  display: flex;
+  align-items: center;
+}
 /* !Home */
 .home {
   display: flex;
