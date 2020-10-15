@@ -24,7 +24,7 @@ const horribleWav2 = {
   url: "http://soundbible.com/mp3/dixie-horn_daniel-simion.mp3",
 };
 
-const playlist = [
+const songList = [
   monsterTruck,
   horribleWav,
   horribleWav2,
@@ -43,7 +43,7 @@ export const songs = () => {
   UL.classList.add("playlist");
 
   //   ! Map
-  playlist.map((track) => {
+  songList.map((track) => {
     UL.append(createTrackElement(track));
   });
 
