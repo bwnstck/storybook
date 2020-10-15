@@ -7,8 +7,5 @@ export const createElement = (tagName, props) => {
   if (children) {
     element.append(...children);
   }
-  //   element.classList.add(props.className);
-  //   element.innerText = props.innerText;
-  //   element.src = props.src;
   return element;
 };

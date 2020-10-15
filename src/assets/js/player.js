@@ -10,3 +10,7 @@ export const showPauseButton = (btn) => {
   btn.src = PauseButtonImg;
   btn.alt = "Play Button";
 };
+
+export const switchIsPlaying = () => {
+  isPlaying = !isPlaying;
+};
