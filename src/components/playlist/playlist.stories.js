@@ -10,7 +10,7 @@ import songsSVG from "../../assets/songs-active.svg";
 import settingsSVG from "../../assets/settings.svg";
 
 export default {
-  title: "Components/JsElements",
+  title: "Components/JsPlaylist",
 };
 
 export const player = () => {
@@ -112,7 +112,7 @@ export const player = () => {
   });
   const playAnchor = createElement("a", {
     className: "player__controls-anchor",
-    onclick: playback.playSong,
+    onclick: playback.nextSong,
     children: [play],
   });
   const backAnchor = createElement("a", {

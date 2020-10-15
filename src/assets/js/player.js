@@ -2,13 +2,17 @@ import PlayButtonImg from "../../assets/play-active.svg";
 import PauseButtonImg from "../../assets/pause-active.svg";
 
 export const showPlayButton = (btn) => {
-  btn.src = PlayButtonImg;
-  btn.alt = "Pause Button";
+  if (btn) {
+    btn.src = PlayButtonImg;
+    btn.alt = "Pause Button";
+  }
 };
 
 export const showPauseButton = (btn) => {
-  btn.src = PauseButtonImg;
-  btn.alt = "Play Button";
+  if (btn) {
+    btn.src = PauseButtonImg;
+    btn.alt = "Play Button";
+  }
 };
 
 // !Menu
@@ -26,9 +30,29 @@ export const chooseSettings = () => {
 };
 
 // !Playback
-export const playSong = () => {
-  console.log("Song Played");
+
+export const playSong = (audioObj, btn) => {
+  if (audioObj.paused) {
+    console.log("Play Song");
+    showPauseButton(btn);
+  } else {
+    console.log("Song Stopped");
+    showPlayButton(btn);
+  }
 };
+
+//!BUG Warum geht das hier nicht?
+
+// (audioObj, playbackButton) => {
+//   if (!audioObj.paused) {
+//     audioObj.pause();
+//     showPlayButton(playbackButton);
+//   } else {
+//     audioObj.play();
+//     showPauseButton(playbackButton);
+//   }
+// }
+
 export const nextSong = () => {
   console.log("Next Song");
 };
