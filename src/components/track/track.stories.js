@@ -35,12 +35,16 @@ export const songs = () => {
     UL.append(createTrackElement(track));
   });
 
-  // ! For Of
+  // ! forEach()
+  //   playlist.forEach((item) => {
+  //     UL.append(createTrackElement(item));
+  //   });
+  // ! for...of
   //   for (let track of playlist) {
   //     let song = createTrackElement(track);
   //     UL.append(song);
   //   }
-  // ! For-Loop
+  // ! for-loop
   //   for (let i = 0; i < playlist.length; i++) {
   //     let song = createTrackElement(playlist[i]);
   //     UL.append(song);

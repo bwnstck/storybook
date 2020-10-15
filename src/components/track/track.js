@@ -10,7 +10,7 @@ export function createTrackElement(track) {
   const songInfo = document.createElement("div");
   const title = document.createElement("h6");
   const artist = document.createElement("span");
-  const playButton = document.createElement("img");
+  const playSongButton = document.createElement("img");
 
   // !ADD Classes
   trackImg.classList.add("song-pic");
@@ -18,7 +18,7 @@ export function createTrackElement(track) {
   songInfo.classList.add("song-info");
   title.classList.add("song-title");
   artist.classList.add("song-artist");
-  playButton.classList.add("play-pic");
+  playSongButton.classList.add("play-pic");
 
   // !ADD Song
   const audioObj = new Audio(track.url);
@@ -27,10 +27,11 @@ export function createTrackElement(track) {
 
   let isPlaying = false;
 
-  playButton.onclick = () => {
+  playSongButton.onclick = () => {
     isPlaying
-      ? (audioObj.pause(), showPlayButton(playButton))
-      : (audioObj.play(), showPauseButton(playButton));
+      ? (audioObj.pause(), showPlayButton(playSongButton))
+      : (audioObj.play(), showPauseButton(playSongButton));
+
     switchIsPlaying();
   };
 
@@ -43,15 +44,15 @@ export function createTrackElement(track) {
   // !ADD Sources
   title.innerText = track.title;
   artist.innerText = track.artist;
-  playButton.src = PlayButtonImg;
-  playButton.alt = "Play Button";
+  playSongButton.src = PlayButtonImg;
+  playSongButton.alt = "Play Button";
   trackImg.src = `https://source.unsplash.com/100x100/?${track.imgSrc}`;
   trackImg.alt = `Album Cover ${track.artist}`;
 
   // !Link HTML Elements together
   listElement.append(trackImg, songBox);
   songInfo.append(title, artist);
-  songBox.append(songInfo, playButton);
+  songBox.append(songInfo, playSongButton);
 
   // !Returning Outer HTML Element
   return listElement;
