@@ -1,4 +1,4 @@
-.button-nav {
+.player__nav {
   width: 100vw;
   height: 67px;
 
@@ -80,8 +80,8 @@
   margin-right: 20px;
 }
 
-.player-controls {
-  width: 100vw;
+.player__controlbar {
+  min-width: 100vw;
   position: fixed;
   bottom: 67px;
 
