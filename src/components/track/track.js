@@ -2,60 +2,75 @@ import PlayButtonImg from "../../assets/play-active.svg";
 
 import { showPauseButton, showPlayButton } from "../../assets/js/player";
 
+import { createElement } from "../../utils/elements";
+
 export function createTrackElement(track) {
-  // !ADD HTML Elements
-  const listElement = document.createElement("li");
-  const trackImg = document.createElement("img");
-  const songBox = document.createElement("div");
-  const songInfo = document.createElement("div");
-  const title = document.createElement("h6");
-  const artist = document.createElement("span");
-  const playSongButton = document.createElement("img");
+  const trackImage = createElement("img", {
+    className: "song-pic",
+    src: `https://source.unsplash.com/100x100/?${track.imgSrc}`,
+    alt: `Image of ${track.artist}`,
+  });
 
-  // !ADD Classes
-  trackImg.classList.add("song-pic");
-  songBox.classList.add("song");
-  songInfo.classList.add("song-info");
-  title.classList.add("song-title");
-  artist.classList.add("song-artist");
-  playSongButton.classList.add("play-pic");
+  const trackElement = createElement("div", {
+    className: "track",
+    innerText: "Replace Me!",
+    children: [trackImage],
+  });
+  return trackElement;
 
-  // !ADD Song
-  const audioObj = new Audio(track.url);
+  //   // !ADD HTML Elements
+  //   const listElement = document.createElement("li");
+  //   const trackImg = document.createElement("img");
+  //   const songBox = document.createElement("div");
+  //   const songInfo = document.createElement("div");
+  //   const title = document.createElement("h6");
+  //   const artist = document.createElement("span");
+  //   const playSongButton = document.createElement("img");
 
-  // !ADD Eventlisteners
+  //   // !ADD Classes
+  //   trackImg.classList.add("song-pic");
+  //   songBox.classList.add("song");
+  //   songInfo.classList.add("song-info");
+  //   title.classList.add("song-title");
+  //   artist.classList.add("song-artist");
+  //   playSongButton.classList.add("play-pic");
 
-  let isPlaying = false;
+  //   // !ADD Song
+  //   const audioObj = new Audio(track.url);
 
-  playSongButton.onclick = () => {
-    isPlaying
-      ? (audioObj.pause(), showPlayButton(playSongButton))
-      : (audioObj.play(), showPauseButton(playSongButton));
+  //   // !ADD Eventlisteners
 
-    switchIsPlaying();
-  };
+  //   let isPlaying = false;
 
-  // !Extracted Functions
+  //   playSongButton.onclick = () => {
+  //     isPlaying
+  //       ? (audioObj.pause(), showPlayButton(playSongButton))
+  //       : (audioObj.play(), showPauseButton(playSongButton));
 
-  const switchIsPlaying = () => {
-    isPlaying = !isPlaying;
-  };
+  //     switchIsPlaying();
+  //   };
 
-  // !ADD Sources
-  title.innerText = track.title;
-  artist.innerText = track.artist;
-  playSongButton.src = PlayButtonImg;
-  playSongButton.alt = "Play Button";
-  trackImg.src = `https://source.unsplash.com/100x100/?${track.imgSrc}`;
-  trackImg.alt = `Album Cover ${track.artist}`;
+  //   // !Extracted Functions
 
-  // !Link HTML Elements together
-  listElement.append(trackImg, songBox);
-  songInfo.append(title, artist);
-  songBox.append(songInfo, playSongButton);
+  //   const switchIsPlaying = () => {
+  //     isPlaying = !isPlaying;
+  //   };
 
-  // !Returning Outer HTML Element
-  return listElement;
+  //   // !ADD Sources
+  //   title.innerText = track.title;
+  //   artist.innerText = track.artist;
+  //   playSongButton.src = PlayButtonImg;
+  //   playSongButton.alt = "Play Button";
+  //   trackImg.src = `https://source.unsplash.com/100x100/?${track.imgSrc}`;
+  //   trackImg.alt = `Album Cover ${track.artist}`;
+
+  //   // !Link HTML Elements together
+  //   listElement.append(trackImg, songBox);
+  //   songInfo.append(title, artist);
+  //   songBox.append(songInfo, playSongButton);
+
+  //   // !Returning Outer HTML Element
+  //   return listElement;
 
   /* //! HTML of Storybook/Pages/navigation/navSongs.html
    <li>
