@@ -31,27 +31,17 @@ export const chooseSettings = () => {
 
 // !Playback
 
-export const playSong = (audioObj, btn) => {
-  if (audioObj.paused) {
-    console.log("Play Song");
-    showPauseButton(btn);
+export const playSong = (audioObj, playbackButton) => {
+  if (!audioObj.paused) {
+    audioObj.pause();
+    showPlayButton(playbackButton);
   } else {
-    console.log("Song Stopped");
-    showPlayButton(btn);
+    audioObj.play();
+    showPauseButton(playbackButton);
   }
 };
 
 //!BUG Warum geht das hier nicht?
-
-// (audioObj, playbackButton) => {
-//   if (!audioObj.paused) {
-//     audioObj.pause();
-//     showPlayButton(playbackButton);
-//   } else {
-//     audioObj.play();
-//     showPauseButton(playbackButton);
-//   }
-// }
 
 export const nextSong = () => {
   console.log("Next Song");

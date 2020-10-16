@@ -3,7 +3,7 @@ import PlayButtonImg from "../../assets/play-active.svg";
 // import { showPauseButton, showPlayButton } from "../../assets/js/player";
 
 import { createElement } from "../../utils/elements";
-import * as playback from "../../assets/js/player";
+import { playSong } from "../../assets/js/player";
 
 export function createTrackElement(track) {
   const audioObj = new Audio(track.url);
@@ -27,7 +27,7 @@ export function createTrackElement(track) {
     src: PlayButtonImg,
     alt: "Play Button",
     //!BUG Warum geht das hier nicht?
-    onclick: playback.playSong(audioObj, playPic),
+    onclick: () => playSong(audioObj, playPic),
   });
   const songInfo = createElement("div", {
     className: "song-info",

@@ -7,6 +7,7 @@ export default { title: "Components/Wave", decorators: [centered] };
 
 export const wavyWaveforEqualizer = () => {
   const waveBox = document.createElement("div");
+  waveBox.className = "waveBox";
   for (let i = 0; i < 20; i++) {
     const line = document.createElement("div");
     line.className = "eq-line";
