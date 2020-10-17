@@ -1,5 +1,9 @@
-function getRandomNumberRange(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
+function getRandomNumberRange(min, max, { floor = true } = {}) {
+  if (floor) {
+    return Math.floor(Math.random() * (max - min) + min);
+  } else {
+    return Math.random() * (max - min) + min;
+  }
 }
 
 function getRandomRGB() {
@@ -28,7 +32,7 @@ export function createWaves() {
   for (let i = 0; i < 40; i++) {
     const line = document.createElement("div");
     line.className = "eq-line";
-    line.style.height = `${getRandomNumberRange(5, 30)}vh`;
+    line.style.height = `${getRandomNumberRange(5, 30, { floor: false })}vh`;
     line.style.backgroundColor = getRandomRGB();
     waveBox.append(line);
   }
