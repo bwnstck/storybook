@@ -8,7 +8,7 @@
   width: 100vw;
   padding: 1rem;
 }
-.player > :first-child {
+.player > :nth-child(-n + 2) {
   margin-bottom: 2rem;
 }
 

@@ -26,7 +26,6 @@ export function createTrackElement(track) {
     className: "play-pic",
     src: PlayButtonImg,
     alt: "Play Button",
-    //!BUG Warum geht das hier nicht?
     onclick: () => playSong(audioObj, playPic),
   });
   const songInfo = createElement("div", {
