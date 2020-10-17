@@ -14,9 +14,11 @@
   width: 2vw;
   margin: 0.5px;
   border-radius: 3px;
+  /* !Hierdurch werden die Javascript Änderungen animiert */
   transition: 0.5s ease-in-out;
 }
 
+/* !CSS für die Knöpfe */
 .colorChanger,
 .heightChanger {
   padding: 1em;
@@ -28,6 +30,7 @@
   background-color: rebeccapurple;
 }
 
+/* !Animation und Übergang für beide Buttons  */
 .colorChanger:active,
 .heightChanger:active {
   background-color: purple;
