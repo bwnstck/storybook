@@ -1,14 +1,20 @@
 import { createElement } from "../../utils/elements";
 // Animation with setInterval() Reference: https://developer.mozilla.org/de/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
 let IntervallID;
-
+let isPlaying = false;
 function startAnimation() {
-  changeHeightAndColor();
-  IntervallID = setInterval(changeHeightAndColor, 500);
-  console.log("animation started");
+  if (!isPlaying) {
+    changeHeightAndColor();
+    IntervallID = setInterval(changeHeightAndColor, 500);
+    console.log("animation started");
+    isPlaying = true;
+  } else {
+    return;
+  }
 }
 function stopAnimation() {
   clearInterval(IntervallID);
+  isPlaying = false;
   console.log("animation stopped");
 }
 
