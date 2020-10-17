@@ -3,6 +3,7 @@ import { createElement } from "../../utils/elements";
 var IntervallID;
 
 function startAnimation() {
+  changeHeightAndColor();
   IntervallID = setInterval(changeHeightAndColor, 500);
   console.log("animation started");
 }
