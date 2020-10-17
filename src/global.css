@@ -21,7 +21,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   margin: 0;
-  background-color: #383b49;
+  background-color: var(--background-color);
   color: #ffffff;
 }
 

@@ -24,14 +24,26 @@ const horribleWav2 = {
   url: "http://soundbible.com/mp3/dixie-horn_daniel-simion.mp3",
 };
 
-const playlist = [monsterTruck, horribleWav, horribleWav2];
+const songList = [
+  monsterTruck,
+  horribleWav,
+  horribleWav2,
+  horribleWav2,
+  horribleWav2,
+  horribleWav2,
+  horribleWav2,
+  horribleWav2,
+  horribleWav2,
+  horribleWav2,
+  horribleWav2,
+];
 
 export const songs = () => {
   const UL = document.createElement("ul");
   UL.classList.add("playlist");
 
   //   ! Map
-  playlist.map((track) => {
+  songList.map((track) => {
     UL.append(createTrackElement(track));
   });
 

@@ -1,0 +1,33 @@
+.waveContainer {
+  text-align: center;
+}
+
+.waveBox {
+  height: 300px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.eq-line {
+  width: 2vw;
+  margin: 0.5px;
+  border-radius: 3px;
+}
+
+.colorChanger {
+  padding: 1em;
+  margin: 2em auto;
+  border: none;
+  border-radius: 5px;
+  color: #c1c0c0;
+  font-weight: 700;
+  background-color: rebeccapurple;
+}
+
+.colorChanger:active {
+  background-color: purple;
+  transform: scale3d(1.1, 1.1, 1.5);
+  transition: 0.1s ease-in-out;
+}

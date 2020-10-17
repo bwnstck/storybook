@@ -1,12 +1,14 @@
 /* !Player  General*/
 .player {
+  position: absolute;
+  bottom: 67px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
   padding: 1rem;
 }
-.player > :first-child {
+.player > :nth-child(-n + 2) {
   margin-bottom: 2rem;
 }
 
@@ -26,7 +28,6 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0;
   color: #c1c0c0;
 }
 
@@ -65,16 +66,19 @@ img.favorites {
 /* Play */
 .player__play {
   height: 2rem;
+  display: flex;
 }
 
-.player__back {
-  width: 20px;
-}
-
+.player__back,
 .player__next {
   width: 20px;
+  height: 100%;
 }
 
+.player__controls-anchor {
+  display: flex;
+  align-items: center;
+}
 /* !Home */
 .home {
   display: flex;

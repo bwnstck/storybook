@@ -50,13 +50,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   flex-grow: 1;
 }
 
-.menu-info {
-  justify-content: center;
-}
 .song-title {
   margin: 0;
   color: #a3a4ab;
@@ -81,7 +78,7 @@
   padding: 10px;
 }
 
-.play-pic:active{
+.play-pic:active {
   box-shadow: 1px 1px 2px 1px #8c0a5e, -1px -1px 2px 1px #8c0a5e;
 }
 
