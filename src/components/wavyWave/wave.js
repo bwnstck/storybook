@@ -25,18 +25,18 @@ function getRandomNumberRange(min, max, { floor = true } = {}) {
   }
 }
 
-function getRandomRGB() {
-  const r = getRandomNumberRange(100, 150);
-  const g = 0;
-  const b = getRandomNumberRange(100, 150);
+function getRandomRGB(colorString) {
+  const r = getRandomNumberRange(colorString.r, colorString.r + 50);
+  const g = getRandomNumberRange(colorString.g, colorString.g + 50);
+  const b = getRandomNumberRange(colorString.b, colorString.b + 50);
   const rgb = `rgb(${r},${g},${b})`;
   return rgb;
 }
 
-function changeColorOf(className) {
+function changeColorOf(className, colorString) {
   const eleToChange = document.getElementsByClassName(className);
   eleToChange.forEach((element) => {
-    element.style.backgroundColor = getRandomRGB();
+    element.style.backgroundColor = getRandomRGB(colorString);
   });
 }
 
@@ -51,6 +51,17 @@ function changeHeightOf(elem) {
   }
 }
 
+function hexToRgb(hex) {
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16),
+      }
+    : null;
+}
+
 export function createWaves() {
   const container = document.createElement("div");
   container.className = "waveContainer";
@@ -59,18 +70,20 @@ export function createWaves() {
 
   waveBox.className = "waveBox";
 
+  const defaultRGB = { r: 100, g: 0, b: 100 };
+
   for (let i = 0; i < 40; i++) {
     const line = document.createElement("div");
     line.className = "eq-line";
     changeHeightOf(line);
-    line.style.backgroundColor = getRandomRGB();
+    line.style.backgroundColor = getRandomRGB(defaultRGB);
     waveBox.append(line);
   }
 
   const colorChanger = document.createElement("button");
   colorChanger.className = "colorChanger";
   colorChanger.innerText = "Change Color";
-  colorChanger.onclick = () => changeColorOf("eq-line");
+  colorChanger.onclick = () => changeColorOf("eq-line", rgbColor);
 
   const heightChanger = document.createElement("button");
   heightChanger.className = "heightChanger";
@@ -92,12 +105,33 @@ export function createWaves() {
     },
   });
 
+  const colorInput = createElement("input", {
+    className: "colorInput",
+    id: "colorPicker",
+    type: "color",
+    placeholder: "Input your rgb([0-255],[0-255],[0-255])",
+  });
+
+  const submitButton = createElement("button", {
+    className: "submitButton",
+    innerText: "Submit Color",
+    onclick: () => {
+      changeColorOf("eq-line");
+    },
+  });
+
+  const color = { r: 100, g: 0, b: 100 };
+
+  const rgbColor = hexToRgb(color);
+
   container.append(
     waveBox,
     colorChanger,
     heightChanger,
     startButton,
-    stopButton
+    stopButton,
+    colorInput,
+    submitButton
   );
   return container;
 }
