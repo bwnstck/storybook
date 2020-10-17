@@ -21,6 +21,17 @@ function changeColorOf(className) {
   });
 }
 
+function changeHeightOf(elem) {
+  if (typeof elem === "string") {
+    const elemList = document.getElementsByClassName(elem);
+    elemList.forEach((elem) => {
+      elem.style.height = `${getRandomNumberRange(5, 30, { floor: false })}vh`;
+    });
+  } else {
+    elem.style.height = `${getRandomNumberRange(5, 30, { floor: false })}vh`;
+  }
+}
+
 export function createWaves() {
   const container = document.createElement("div");
   container.className = "waveContainer";
@@ -32,7 +43,7 @@ export function createWaves() {
   for (let i = 0; i < 40; i++) {
     const line = document.createElement("div");
     line.className = "eq-line";
-    line.style.height = `${getRandomNumberRange(5, 30, { floor: false })}vh`;
+    changeHeightOf(line);
     line.style.backgroundColor = getRandomRGB();
     waveBox.append(line);
   }
@@ -42,6 +53,11 @@ export function createWaves() {
   colorChanger.innerText = "Change Color";
   colorChanger.onclick = () => changeColorOf("eq-line");
 
-  container.append(waveBox, colorChanger);
+  const heightChanger = document.createElement("button");
+  heightChanger.className = "heightChanger";
+  heightChanger.innerText = "Change Height";
+  heightChanger.onclick = () => changeHeightOf("eq-line");
+
+  container.append(waveBox, colorChanger, heightChanger);
   return container;
 }
