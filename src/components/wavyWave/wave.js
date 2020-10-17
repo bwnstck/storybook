@@ -28,7 +28,7 @@ export function createWaves() {
   for (let i = 0; i < 40; i++) {
     const line = document.createElement("div");
     line.className = "eq-line";
-    line.style.height = `${Math.floor(Math.random() * 30)}vh`;
+    line.style.height = `${getRandomNumberRange(5, 30)}vh`;
     line.style.backgroundColor = getRandomRGB();
     waveBox.append(line);
   }
