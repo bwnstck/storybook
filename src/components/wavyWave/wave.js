@@ -1,6 +1,6 @@
 import { createElement } from "../../utils/elements";
-
-var IntervallID;
+// Animation with setInterval() Reference: https://developer.mozilla.org/de/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
+let IntervallID;
 
 function startAnimation() {
   changeHeightAndColor();
@@ -16,12 +16,6 @@ function changeHeightAndColor() {
   changeColorOf("eq-line");
   changeHeightOf("eq-line");
 }
-
-// const interval = setInterval(function() {
-//     // method to be executed;
-//   }, 5000);
-
-//  clearInterval(interval); // thanks @Luca D'Amico
 
 function getRandomNumberRange(min, max, { floor = true } = {}) {
   if (floor) {
