@@ -28,7 +28,8 @@
   background-color: rebeccapurple;
 }
 
-.colorChanger:active {
+.colorChanger:active,
+.heightChanger:active {
   background-color: purple;
   transform: scale3d(1.1, 1.1, 1.5);
   transition: 0.1s ease-in-out;
