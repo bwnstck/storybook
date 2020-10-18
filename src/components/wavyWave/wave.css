@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .eq-line {
@@ -18,19 +19,32 @@
 }
 
 .colorChanger,
-.heightChanger {
+.heightChanger,
+.stop-button,
+.start-button {
   padding: 1em;
   margin: 2em 10px;
   border: none;
   border-radius: 5px;
   color: #c1c0c0;
   font-weight: 700;
-  background-color: rebeccapurple;
+  background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
 }
 
 .colorChanger:active,
-.heightChanger:active {
+.heightChanger:active,
+.stop-button:active,
+.start-button:active {
   background-color: purple;
   transform: scale3d(1.1, 1.1, 1.5);
   transition: 0.1s ease-in-out;
+}
+.start-button {
+  color: white;
+  background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+}
+
+.stop-button {
+  color: white;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
 }

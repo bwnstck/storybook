@@ -1,3 +1,28 @@
+import { createElement } from "../../utils/elements";
+// Animation with setInterval() Reference: https://developer.mozilla.org/de/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
+let IntervallID;
+let isPlaying = false;
+function startAnimation() {
+  if (!isPlaying) {
+    changeHeightAndColor();
+    IntervallID = setInterval(changeHeightAndColor, 500);
+    console.log("animation started");
+    isPlaying = true;
+  } else {
+    return;
+  }
+}
+function stopAnimation() {
+  clearInterval(IntervallID);
+  isPlaying = false;
+  console.log("animation stopped");
+}
+
+function changeHeightAndColor() {
+  changeColorOf("eq-line");
+  changeHeightOf("eq-line");
+}
+
 function getRandomNumberRange(min, max, { floor = true } = {}) {
   if (floor) {
     return Math.floor(Math.random() * (max - min) + min);
@@ -58,6 +83,27 @@ export function createWaves() {
   heightChanger.innerText = "Change Height";
   heightChanger.onclick = () => changeHeightOf("eq-line");
 
-  container.append(waveBox, colorChanger, heightChanger);
+  const startButton = createElement("button", {
+    className: "start-button",
+    innerText: "Start",
+    onclick: () => {
+      startAnimation();
+    },
+  });
+  const stopButton = createElement("button", {
+    className: "stop-button",
+    innerText: "Stop",
+    onclick: () => {
+      stopAnimation();
+    },
+  });
+
+  container.append(
+    waveBox,
+    colorChanger,
+    heightChanger,
+    startButton,
+    stopButton
+  );
   return container;
 }
